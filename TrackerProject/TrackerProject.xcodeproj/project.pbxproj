@@ -14,6 +14,8 @@
 		F04407EA2B5F05F800D01C09 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407E92B5F05F800D01C09 /* Project.swift */; };
 		F04407EC2B5F068F00D01C09 /* ProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407EB2B5F068F00D01C09 /* ProjectUpdate.swift */; };
 		F04407F02B5F29C200D01C09 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407EF2B5F29C200D01C09 /* FontHelper.swift */; };
+		F04407F52B5F41E900D01C09 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407F42B5F41E900D01C09 /* StatBubbleView.swift */; };
+		F04407F72B5F439000D01C09 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407F62B5F439000D01C09 /* ProjectCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		F04407E92B5F05F800D01C09 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		F04407EB2B5F068F00D01C09 /* ProjectUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdate.swift; sourceTree = "<group>"; };
 		F04407EF2B5F29C200D01C09 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		F04407F42B5F41E900D01C09 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
+		F04407F62B5F439000D01C09 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				F04407DA2B5F00E600D01C09 /* DBProjectTracker.swift */,
-				F04407DC2B5F00E600D01C09 /* ContentView.swift */,
+				F04407F12B5F419700D01C09 /* ProjectList */,
 				F04407ED2B5F297A00D01C09 /* Helpers */,
 				F04407E82B5F05E500D01C09 /* Models */,
 				F04407DE2B5F00E700D01C09 /* Assets.xcassets */,
@@ -90,6 +94,16 @@
 				F04407EF2B5F29C200D01C09 /* FontHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F04407F12B5F419700D01C09 /* ProjectList */ = {
+			isa = PBXGroup;
+			children = (
+				F04407DC2B5F00E600D01C09 /* ContentView.swift */,
+				F04407F42B5F41E900D01C09 /* StatBubbleView.swift */,
+				F04407F62B5F439000D01C09 /* ProjectCardView.swift */,
+			);
+			path = ProjectList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F04407EC2B5F068F00D01C09 /* ProjectUpdate.swift in Sources */,
+				F04407F52B5F41E900D01C09 /* StatBubbleView.swift in Sources */,
 				F04407F02B5F29C200D01C09 /* FontHelper.swift in Sources */,
 				F04407DD2B5F00E600D01C09 /* ContentView.swift in Sources */,
+				F04407F72B5F439000D01C09 /* ProjectCardView.swift in Sources */,
 				F04407DB2B5F00E600D01C09 /* DBProjectTracker.swift in Sources */,
 				F04407EA2B5F05F800D01C09 /* Project.swift in Sources */,
 			);
