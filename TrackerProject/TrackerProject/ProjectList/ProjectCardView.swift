@@ -26,7 +26,6 @@ struct ProjectCardView: View {
                     StatBubbleView(title: "Hours", stat: "32", startColor: Color("Maroon"), endColor: Color("Purple"))
                     StatBubbleView(title: "Hours", stat: "9", startColor: Color("Maroon"), endColor: Color("Olive"))
                     Spacer()
-                    
                 }
                 Text("My current focus is ...")
                     .font(.featuredText)
