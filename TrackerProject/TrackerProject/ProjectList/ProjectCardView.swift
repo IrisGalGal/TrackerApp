@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProjectCardView: View {
+    var project : Project
     var body: some View {
         
         ZStack(alignment: .leading){
@@ -15,7 +16,7 @@ struct ProjectCardView: View {
                 .opacity(0.7)
                 .shadow(radius: 5, x: 0, y: 4)
             VStack(alignment: .leading, content: {
-                Text("Placeholder")
+                Text(project.name)
                     .font(.bigHeadline)
                     .foregroundStyle(.white)
                 HStack(alignment: .center, spacing: 13){
@@ -41,5 +42,5 @@ struct ProjectCardView: View {
 }
 
 #Preview {
-    ProjectCardView()
+    ProjectCardView(project: Project())
 }

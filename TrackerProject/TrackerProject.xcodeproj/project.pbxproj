@@ -16,6 +16,7 @@
 		F04407F02B5F29C200D01C09 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407EF2B5F29C200D01C09 /* FontHelper.swift */; };
 		F04407F52B5F41E900D01C09 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407F42B5F41E900D01C09 /* StatBubbleView.swift */; };
 		F04407F72B5F439000D01C09 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407F62B5F439000D01C09 /* ProjectCardView.swift */; };
+		F04407F92B604F5600D01C09 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407F82B604F5600D01C09 /* AddProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F04407EF2B5F29C200D01C09 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		F04407F42B5F41E900D01C09 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 		F04407F62B5F439000D01C09 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		F04407F82B604F5600D01C09 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				F04407DC2B5F00E600D01C09 /* ContentView.swift */,
 				F04407F42B5F41E900D01C09 /* StatBubbleView.swift */,
 				F04407F62B5F439000D01C09 /* ProjectCardView.swift */,
+				F04407F82B604F5600D01C09 /* AddProjectView.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				F04407EC2B5F068F00D01C09 /* ProjectUpdate.swift in Sources */,
 				F04407F52B5F41E900D01C09 /* StatBubbleView.swift in Sources */,
+				F04407F92B604F5600D01C09 /* AddProjectView.swift in Sources */,
 				F04407F02B5F29C200D01C09 /* FontHelper.swift in Sources */,
 				F04407DD2B5F00E600D01C09 /* ContentView.swift in Sources */,
 				F04407F72B5F439000D01C09 /* ProjectCardView.swift in Sources */,
