@@ -21,6 +21,7 @@
 		F04407FE2B61A23700D01C09 /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407FD2B61A23700D01C09 /* ProjectUpdateView.swift */; };
 		F04408002B61CAD900D01C09 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407FF2B61CAD900D01C09 /* AddUpdateView.swift */; };
 		F04408022B61D73300D01C09 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408012B61D73300D01C09 /* DataHelper.swift */; };
+		F04408042B61DC4900D01C09 /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408032B61DC4900D01C09 /* EditFocusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F04407FD2B61A23700D01C09 /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
 		F04407FF2B61CAD900D01C09 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
 		F04408012B61D73300D01C09 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		F04408032B61DC4900D01C09 /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F04407F42B5F41E900D01C09 /* StatBubbleView.swift */,
 				F04407F62B5F439000D01C09 /* ProjectCardView.swift */,
 				F04407F82B604F5600D01C09 /* AddProjectView.swift */,
+				F04408032B61DC4900D01C09 /* EditFocusView.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				F04407EC2B5F068F00D01C09 /* ProjectUpdate.swift in Sources */,
 				F04407F52B5F41E900D01C09 /* StatBubbleView.swift in Sources */,
+				F04408042B61DC4900D01C09 /* EditFocusView.swift in Sources */,
 				F04407FC2B6182F700D01C09 /* ProjectDetailView.swift in Sources */,
 				F04407F92B604F5600D01C09 /* AddProjectView.swift in Sources */,
 				F04407F02B5F29C200D01C09 /* FontHelper.swift in Sources */,

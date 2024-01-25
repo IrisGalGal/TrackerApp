@@ -26,9 +26,10 @@ struct AddUpdateView: View {
                     .font(.bigHeadline)
                     .foregroundStyle(.white)
                 TextField("Headline", text: $headline)
-                    .foregroundStyle(.white)
+                    .background(Color.white)
                 TextField("Summary", text: $summary, axis: .vertical)
-                    .foregroundStyle(.white)
+                    .background(Color.white)
+
                 HStack{
                     
                     TextField("Hours", text: $hours)
@@ -40,13 +41,14 @@ struct AddUpdateView: View {
                         update.headline = headline
                         update.summary = summary
                         update.hours = Double(hours)!
-                        project.update.append(update)
+                        project.update.insert(update, at: 0)
                         
                         dismiss()
                     }
+                    .background(Color.blue)
                     .buttonStyle(.borderedProminent)
-                    .tint(.white)
                 }
+                .background(Color.white)
                 Spacer()
             }
             .padding(.horizontal)
