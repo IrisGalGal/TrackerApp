@@ -11,7 +11,7 @@ import SwiftData
 struct ContentView: View {
     @State private var newProject: Project?
     @Query private var projects: [Project]
-    
+    @State private var selectedProject: Project?
     var body: some View {
         NavigationStack {
             ZStack{
@@ -25,15 +25,13 @@ struct ContentView: View {
                     ScrollView(showsIndicators: false) {
                         VStack(alignment: .leading, spacing: 26){
                             ForEach(projects){ p in
-                                NavigationLink {
-                                    ProjectDetailView(project: p)
-                                } label: {
-                                    ProjectCardView(project: p)
-                                        .onLongPressGesture {
-                                            newProject = p
-                                        }
-                                }
-                                .buttonStyle(.plain)
+                                ProjectCardView(project: p)
+                                    .onTapGesture {
+                                        selectedProject = p
+                                    }
+                                    .onLongPressGesture {
+                                        newProject = p
+                                    }
                             }
                             
                         }
@@ -60,7 +58,9 @@ struct ContentView: View {
                 }
                 .padding(.leading)
             }
-
+            .navigationDestination(item: $selectedProject) { project in
+                ProjectDetailView(project: project)
+            }
         }
         .sheet(item: $newProject) { project in
             let isEdit = project.name.trimmingCharacters(in: .whitespacesAndNewlines) != ""
