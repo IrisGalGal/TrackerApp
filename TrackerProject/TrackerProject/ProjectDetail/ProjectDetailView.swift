@@ -13,6 +13,7 @@ struct ProjectDetailView: View {
     @State private var update: ProjectUpdate?
     @State private var showEditFocus = false
     
+    
     var body: some View {
         ZStack(content: {
             LinearGradient(colors: [Color("Navy"), Color("Blue")], startPoint: .top, endPoint: .bottom)
@@ -67,6 +68,12 @@ struct ProjectDetailView: View {
                     VStack(spacing: 27){
                         ForEach(project.update.sorted(by: { u1,u2 in u1.date < u2.date })){ update in
                             ProjectUpdateView(update: update)
+                                .onTapGesture {
+                                    
+                                }
+                                .onLongPressGesture {
+                                    self.update = update
+                                }
                         }
                     }
                     .padding()
@@ -108,7 +115,8 @@ struct ProjectDetailView: View {
         })
         .navigationBarBackButtonHidden(true)
         .sheet(item: $update) { update in
-            AddUpdateView(project: project, update: update)
+            let isEditMode = update.headline.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+            EditUpdateView(project: project, update: update, isEditMode: isEditMode)
                 .presentationDetents([.fraction(0.3)])
         }
         .sheet(isPresented: $showEditFocus, content: {

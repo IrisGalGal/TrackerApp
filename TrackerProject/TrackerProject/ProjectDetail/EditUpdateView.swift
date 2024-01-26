@@ -7,22 +7,25 @@
 
 import SwiftUI
 
-struct AddUpdateView: View {
+struct EditUpdateView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
     
     var project: Project
     var update: ProjectUpdate
+    var isEditMode: Bool
+    
     @State var headline:String = ""
     @State var summary:String = ""
     @State var hours:String = ""
-
+    @State var showConfirmation = false
+    
     var body: some View {
         ZStack{
             Color.black
                 .ignoresSafeArea()
             VStack(alignment: .leading){
-                Text("New Update")
+                Text(isEditMode ? "Edit New": "New Update")
                     .font(.bigHeadline)
                     .foregroundStyle(.white)
                 TextField("Headline", text: $headline)
@@ -36,23 +39,45 @@ struct AddUpdateView: View {
                         .keyboardType(.numberPad)
                         .frame(width: 60)
                     
-                    Button("Save"){
+                    Button(isEditMode ? "Save": "Add"){
                         // TODO:
                         update.headline = headline
                         update.summary = summary
                         update.hours = Double(hours)!
-                        project.update.insert(update, at: 0)
-                        
+                        if !isEditMode{
+                            project.update.insert(update, at: 0)
+                        }
                         dismiss()
                     }
                     .background(Color.blue)
                     .buttonStyle(.borderedProminent)
+                    
+                    if isEditMode{
+                        Button("Delete") {
+                            showConfirmation = true
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.red)
+                    }
                 }
                 .background(Color.white)
                 Spacer()
             }
             .padding(.horizontal)
             .padding(.top)
+        }
+        .confirmationDialog("Really delete the update ? ", isPresented: $showConfirmation) {
+            Button("yes, delete it") {
+                project.update.removeAll(){ u in
+                    u.id == update.id
+                }
+                dismiss()
+            }
+        }
+        .onAppear{
+            headline = update.headline
+            summary = update.summary
+            hours = String(Int(update.hours))
         }
     }
 }

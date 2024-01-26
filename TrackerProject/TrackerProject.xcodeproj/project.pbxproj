@@ -19,7 +19,7 @@
 		F04407F92B604F5600D01C09 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407F82B604F5600D01C09 /* EditProjectView.swift */; };
 		F04407FC2B6182F700D01C09 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407FB2B6182F700D01C09 /* ProjectDetailView.swift */; };
 		F04407FE2B61A23700D01C09 /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407FD2B61A23700D01C09 /* ProjectUpdateView.swift */; };
-		F04408002B61CAD900D01C09 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407FF2B61CAD900D01C09 /* AddUpdateView.swift */; };
+		F04408002B61CAD900D01C09 /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407FF2B61CAD900D01C09 /* EditUpdateView.swift */; };
 		F04408022B61D73300D01C09 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408012B61D73300D01C09 /* DataHelper.swift */; };
 		F04408042B61DC4900D01C09 /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408032B61DC4900D01C09 /* EditFocusView.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		F04407F82B604F5600D01C09 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		F04407FB2B6182F700D01C09 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		F04407FD2B61A23700D01C09 /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
-		F04407FF2B61CAD900D01C09 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
+		F04407FF2B61CAD900D01C09 /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 		F04408012B61D73300D01C09 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		F04408032B61DC4900D01C09 /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +127,7 @@
 			children = (
 				F04407FB2B6182F700D01C09 /* ProjectDetailView.swift */,
 				F04407FD2B61A23700D01C09 /* ProjectUpdateView.swift */,
-				F04407FF2B61CAD900D01C09 /* AddUpdateView.swift */,
+				F04407FF2B61CAD900D01C09 /* EditUpdateView.swift */,
 			);
 			path = ProjectDetail;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 				F04407DB2B5F00E600D01C09 /* DBProjectTracker.swift in Sources */,
 				F04408022B61D73300D01C09 /* DataHelper.swift in Sources */,
 				F04407EA2B5F05F800D01C09 /* Project.swift in Sources */,
-				F04408002B61CAD900D01C09 /* AddUpdateView.swift in Sources */,
+				F04408002B61CAD900D01C09 /* EditUpdateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
