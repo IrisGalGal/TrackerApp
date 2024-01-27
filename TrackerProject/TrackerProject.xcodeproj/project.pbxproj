@@ -22,6 +22,7 @@
 		F04408002B61CAD900D01C09 /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04407FF2B61CAD900D01C09 /* EditUpdateView.swift */; };
 		F04408022B61D73300D01C09 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408012B61D73300D01C09 /* DataHelper.swift */; };
 		F04408042B61DC4900D01C09 /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408032B61DC4900D01C09 /* EditFocusView.swift */; };
+		F0B056392B64776400FB345B /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B056382B64776400FB345B /* StatHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F04407FF2B61CAD900D01C09 /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 		F04408012B61D73300D01C09 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		F04408032B61DC4900D01C09 /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
+		F0B056382B64776400FB345B /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				F04407EF2B5F29C200D01C09 /* FontHelper.swift */,
 				F04408012B61D73300D01C09 /* DataHelper.swift */,
+				F0B056382B64776400FB345B /* StatHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				F04407FE2B61A23700D01C09 /* ProjectUpdateView.swift in Sources */,
 				F04407DB2B5F00E600D01C09 /* DBProjectTracker.swift in Sources */,
 				F04408022B61D73300D01C09 /* DataHelper.swift in Sources */,
+				F0B056392B64776400FB345B /* StatHelper.swift in Sources */,
 				F04407EA2B5F05F800D01C09 /* Project.swift in Sources */,
 				F04408002B61CAD900D01C09 /* EditUpdateView.swift in Sources */,
 			);
