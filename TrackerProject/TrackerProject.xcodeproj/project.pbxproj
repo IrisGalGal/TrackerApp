@@ -23,6 +23,7 @@
 		F04408022B61D73300D01C09 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408012B61D73300D01C09 /* DataHelper.swift */; };
 		F04408042B61DC4900D01C09 /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04408032B61DC4900D01C09 /* EditFocusView.swift */; };
 		F0B056392B64776400FB345B /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B056382B64776400FB345B /* StatHelper.swift */; };
+		F0B0563B2B648A7C00FB345B /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0563A2B648A7C00FB345B /* TextHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		F04408012B61D73300D01C09 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		F04408032B61DC4900D01C09 /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 		F0B056382B64776400FB345B /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
+		F0B0563A2B648A7C00FB345B /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F04407EF2B5F29C200D01C09 /* FontHelper.swift */,
 				F04408012B61D73300D01C09 /* DataHelper.swift */,
 				F0B056382B64776400FB345B /* StatHelper.swift */,
+				F0B0563A2B648A7C00FB345B /* TextHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				F04407F92B604F5600D01C09 /* EditProjectView.swift in Sources */,
 				F04407F02B5F29C200D01C09 /* FontHelper.swift in Sources */,
 				F04407DD2B5F00E600D01C09 /* ContentView.swift in Sources */,
+				F0B0563B2B648A7C00FB345B /* TextHelper.swift in Sources */,
 				F04407F72B5F439000D01C09 /* ProjectCardView.swift in Sources */,
 				F04407FE2B61A23700D01C09 /* ProjectUpdateView.swift in Sources */,
 				F04407DB2B5F00E600D01C09 /* DBProjectTracker.swift in Sources */,

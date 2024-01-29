@@ -28,6 +28,9 @@ struct EditProjectView: View {
                 HStack{
                     TextField("Project name", text: $projectName)
                         .textFieldStyle(.roundedBorder)
+                        .onChange(of: projectName) {
+                            projectName = TextHelper.limitChars(input: projectName, limit: 30)
+                        }
                     
                     Button(isEditMode  ? "Save": "Add"){
                         // ADD project
@@ -42,7 +45,7 @@ struct EditProjectView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.blue)
-                    .disabled(projectName.trimmingCharacters(in: .whitespacesAndNewlines) == "")
+                    .disabled(projectName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                     if isEditMode{
                         Button("Delete"){
                             showConfirmation = true

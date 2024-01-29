@@ -32,10 +32,10 @@ struct ProjectDetailView: View {
                         .foregroundStyle(.white)
                     HStack(alignment: .center, spacing: 13){
                         Spacer()
-                        StatBubbleView(title: "Hours", stat: String(project.hours), startColor: Color("Navy"), endColor: Color("Blue"))
-                        StatBubbleView(title: "Hours", stat: String(project.sessions), startColor: Color("Green"), endColor: Color("Lime"))
-                        StatBubbleView(title: "Upadate", stat: String(project.update.count), startColor: Color("Maroon"), endColor: Color("Purple"))
-                        StatBubbleView(title: "Wins", stat: String(project.wins), startColor: Color("Maroon"), endColor: Color("Olive"))
+                        StatBubbleView(title: "Hours", stat: project.hours, startColor: Color("Navy"), endColor: Color("Blue"))
+                        StatBubbleView(title: "Hours", stat: Double(project.sessions), startColor: Color("Green"), endColor: Color("Lime"))
+                        StatBubbleView(title: "Upadate", stat: Double(project.update.count), startColor: Color("Maroon"), endColor: Color("Purple"))
+                        StatBubbleView(title: "Wins", stat: Double(project.wins), startColor: Color("Maroon"), endColor: Color("Olive"))
                         Spacer()
                     }
                     Text("My current focus is....")
@@ -67,20 +67,35 @@ struct ProjectDetailView: View {
                         .clipShape(.rect(bottomLeadingRadius: 15, bottomTrailingRadius: 15))
                         .ignoresSafeArea()
                 }
-                ScrollView(showsIndicators: false){
-                    VStack(spacing: 27){
-                        ForEach(project.update.sorted(by: { u1,u2 in u1.date < u2.date })){ update in
-                            ProjectUpdateView(update: update)
-                                .onTapGesture {
-                                    
-                                }
-                                .onLongPressGesture {
-                                    self.update = update
-                                }
+                if project.update.count > 0{
+                    ScrollView(showsIndicators: false){
+                        VStack(spacing: 27){
+                            ForEach(project.update.sorted(by: { u1,u2 in u1.date < u2.date })){ update in
+                                ProjectUpdateView(update: update)
+                                    .onTapGesture {
+                                        
+                                    }
+                                    .onLongPressGesture {
+                                        self.update = update
+                                    }
+                            }
                         }
+                        .padding()
+                        .padding(.bottom, 80)
                     }
-                    .padding()
-                    .padding(.bottom, 80)
+                }else{
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button("Tap to add a new update") {
+                            update = ProjectUpdate()
+                        }
+                        .buttonStyle(.bordered)
+                        .foregroundStyle(.white)
+                        .padding(.bottom, 100)
+                        Spacer()
+                    }
+                    Spacer()
                 }
             }
             
