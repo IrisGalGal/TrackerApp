@@ -50,10 +50,15 @@ struct EditUpdateView: View {
                         update.summary = summary
                         update.hours = Double(hours)!
                         if !isEditMode{
-                            project.update.insert(update, at: 0)
+                            withAnimation {
+                                project.update.insert(update, at: 0)
+                                try? context.save()
+                            }
                             StatHelper.updateAdded(project: project, update: update)
                         }else{
-                            StatHelper.updateEdit(project: project, hoursDifference: hoursDifference)
+                            withAnimation {
+                                StatHelper.updateEdit(project: project, hoursDifference: hoursDifference)
+                            }
                         }
                         dismiss()
                     }
@@ -77,9 +82,12 @@ struct EditUpdateView: View {
         }
         .confirmationDialog("Really delete the update ? ", isPresented: $showConfirmation) {
             Button("yes, delete it") {
-                project.update.removeAll(){ u in
-                    u.id == update.id
+                withAnimation {
+                    project.update.removeAll(){ u in
+                        u.id == update.id
+                    }
                 }
+                
                 try? context.save()
                 
                 StatHelper.updateDeleted(project: project, update: update)

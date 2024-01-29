@@ -37,8 +37,12 @@ struct EditProjectView: View {
                         if isEditMode{
                             project.name = projectName
                         }else{
-                            project.name = projectName
-                            context.insert(project)
+                            withAnimation {
+                                project.name = projectName
+                                context.insert(project)
+                                try? context.save()
+                            }
+                           
                         }
                         
                         dismiss()
@@ -61,7 +65,10 @@ struct EditProjectView: View {
         }
         .confirmationDialog("Realyy delete?", isPresented: $showConfirmation, titleVisibility: .automatic) {
             Button("Yes, delete it") {
-                context.delete(project)
+                withAnimation {
+                    context.delete(project)
+                    try? context.save()
+                }
                 dismiss()
             }
         }

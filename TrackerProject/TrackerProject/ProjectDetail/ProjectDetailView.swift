@@ -15,7 +15,7 @@ struct ProjectDetailView: View {
     var project: Project
     @State private var update: ProjectUpdate?
     @State private var showEditFocus = false
-    
+    @State private var animationOffset = 200
     
     var body: some View {
         ZStack(content: {
@@ -70,8 +70,14 @@ struct ProjectDetailView: View {
                 if project.update.count > 0{
                     ScrollView(showsIndicators: false){
                         VStack(spacing: 27){
-                            ForEach(project.update.sorted(by: { u1,u2 in u1.date < u2.date })){ update in
+                            
+                            let sortedArray = project.update.sorted(by: { u1,u2 in u1.date < u2.date })
+                            
+                            ForEach(Array(sortedArray.enumerated()), id: \.element){ index, update in
                                 ProjectUpdateView(update: update)
+                                    .animation(.easeOut.delay(TimeInterval(0.05) * Double(index)), value: animationOffset)
+                                    .offset(y: CGFloat(animationOffset))
+                                    
                                     .onTapGesture {
                                         
                                     }
@@ -141,6 +147,11 @@ struct ProjectDetailView: View {
             EditFocusView(project: project)
                 .presentationDetents([.fraction(0.2)])
         })
+        .onAppear {
+            withAnimation {
+                animationOffset = 0
+            }
+        }
     }
     
     func completeMilestone(){
